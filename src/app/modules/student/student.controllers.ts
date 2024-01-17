@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { StudentServices } from "./student.service";
+import { Request, Response } from 'express';
+import { StudentServices } from './student.service';
 
 const createStudent = async (req: Request, res: Response) => {
     try {
@@ -10,12 +10,12 @@ const createStudent = async (req: Request, res: Response) => {
         res.status(200).json({
             success: true,
             message: 'Student is created successfully',
-            data: result
-        })
+            data: result,
+        });
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
-}
+};
 
 const getAllStudents = async (req: Request, res: Response) => {
     try {
@@ -23,13 +23,12 @@ const getAllStudents = async (req: Request, res: Response) => {
         res.status(200).json({
             success: true,
             message: 'Students get successfully',
-            data: result
+            data: result,
         });
-
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
-}
+};
 
 const getSingleStudents = async (req: Request, res: Response) => {
     try {
@@ -38,16 +37,15 @@ const getSingleStudents = async (req: Request, res: Response) => {
         res.status(200).json({
             success: true,
             message: 'Get single tudent successfully',
-            data: result
+            data: result,
         });
-
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
-}
+};
 
 export const StudentControllers = {
     createStudent,
     getAllStudents,
-    getSingleStudents
-}
+    getSingleStudents,
+};
